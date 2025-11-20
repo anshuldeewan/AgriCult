@@ -593,11 +593,12 @@ html {
 .about .box-container {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(6, 1fr);
-  /* Fixed to 6 columns */
-  /* grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); */
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  /* Use auto-fit so cards wrap responsively and fit available space */
+  justify-items: center;
+  align-items: start;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -617,7 +618,14 @@ html {
   box-shadow: black 0px 5px 15px;
   border-radius: 0.5rem;
   text-align: center;
-  padding: 2.5rem;
+  padding: 1.8rem;
+  max-width: 30rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 34rem;
 }
 
 .about .box:hover {
@@ -639,13 +647,14 @@ html {
 
 /* Style for the member image */
 .box img {
-  width: 100%;
-  height: auto;
+  width: 16rem;
+  height: 16rem;
   border-radius: 8px;
   /* Adds a slight border-radius to the image */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* Adds a subtle box shadow */
   object-fit: cover;
+  margin: 0 0 1.2rem 0;
 }
 
 .box img:hover {
