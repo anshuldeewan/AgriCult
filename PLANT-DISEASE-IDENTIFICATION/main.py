@@ -26,7 +26,7 @@ app_mode = st.sidebar.selectbox("Select Page", ["HOME", "DISEASE RECOGNITION"])
 
 # Main Banner Image
 try:
-    img = Image.open("Diseases.png")
+    img = Image.open("PLANT-DISEASE-IDENTIFICATION\Diseases.png")
     st.image(img, use_container_width=True)
 except Exception:
     st.warning("Banner image not found.")
